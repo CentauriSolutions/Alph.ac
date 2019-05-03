@@ -37,6 +37,10 @@ gem 'groupdate'
 
 gem 'scout_apm'
 
+group :production do
+  gem 'actionpack-cloudflare'
+end
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

@@ -1,0 +1,4 @@
+%ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+  - if user_signed_in?
+    = nav_link "My Links", links_path
+  = nav_link "New Link", new_link_path

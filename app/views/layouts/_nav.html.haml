@@ -1,0 +1,7 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to "Alph.ac", root_path,  class: "navbar-brand"
+  %button.navbar-toggler{"aria-controls" => "navbarTogglerDemo02", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarTogglerDemo02", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarTogglerDemo02.collapse.navbar-collapse
+    = render partial: "layouts/nav_left"
+    = render partial: "layouts/nav_right"

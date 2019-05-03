@@ -7,8 +7,24 @@
     %title= Rails.application.class.parent_name
     = csrf_meta_tags
     = action_cable_meta_tag
-    = stylesheet_pack_tag 'application', media: 'all'
-  %body
-    = yield
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
+  %body
+    = render partial: 'layouts/nav'
+    .row
+      .col-xs-10.col-xs-offset-1
+        - flash.each do |type, msg|
+          - if type == "notice"
+            - klass = "alert alert-success"
+          - elsif type == "alert"
+            - klass = "alert alert-danger"
+          - else
+            - klass = "alert alert-#{"#{type}"}"
+          %div{class: klass}
+            %a.close{"data-dismiss" => "alert", :href => "#"} ×
+            %ul
+              %li
+                = msg
+    .container-fluid
+      = yield
     = javascript_pack_tag 'application'

@@ -1,0 +1,15 @@
+%h1
+  Short link for #{@link.url}
+  %small.text-muted= link_to "Edit",  edit_link_path(@link)
+%h2 Clicks:
+%dl.row
+  .col-sm-4
+    %table.table.table-striped
+      %thead
+        %tr
+          %td Date
+          %td Count
+      - @link.clicks.group_by_day(:created_at).count.each do |date, count|
+        %tr
+          %td= date.strftime("%B %-d, %Y")
+          %td= count

@@ -7,7 +7,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    @links = Link.where(user: current_user).page(params[:page] || 1)
   end
 
   # GET /links/1

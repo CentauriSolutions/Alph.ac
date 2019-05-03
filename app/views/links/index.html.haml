@@ -18,8 +18,9 @@
             %td= link.clicks.count
             %td
               =link_to 'Show', link
-              - if user_signed_in? && link.user == current_user
-                |
-                =link_to 'Edit', edit_link_path(link)
-                |
-                = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
+              |
+              =link_to 'Edit', edit_link_path(link)
+              |
+              = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
+
+= will_paginate @links, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

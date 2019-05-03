@@ -38,6 +38,9 @@ gem 'groupdate'
 gem 'remote_ip_proxy_scrubber'
 gem 'scout_apm'
 
+gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

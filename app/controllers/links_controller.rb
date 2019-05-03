@@ -85,6 +85,7 @@ class LinksController < ApplicationController
     parsed = URI.parse url
     parsed = URI.parse "http://#{url}" unless parsed.scheme
     Rails.logger.debug "Shortening #{parsed}"
+    parsed
   end
 
   # Use callbacks to share common setup or constraints between actions.

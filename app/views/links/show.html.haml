@@ -1,6 +1,7 @@
 %h1
   Short link for #{@link.url}
-  %small.text-muted= link_to "Edit",  edit_link_path(@link)
+  - if user_signed_in? && @link.user == current_user
+    %small.text-muted= link_to "Edit",  edit_link_path(@link)
 %h2 Clicks:
 %dl.row
   .col-sm-4

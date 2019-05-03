@@ -11,6 +11,10 @@ AllCops:
     - bin/*
     - node_modules/**/*
 
+Style/AndOr:
+  Exclude:
+    - 'app/controllers/**/*'
+
 Style/Documentation:
   Enabled: false
 
@@ -26,6 +30,9 @@ Style/StructInheritance:
 
 Rails/InverseOf:
   Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
 
 Metrics/BlockLength:
   Exclude:
@@ -46,3 +53,4 @@ GlobalVars:
 Rails/Output:
   Exclude:
     - db/seeds.rb
+

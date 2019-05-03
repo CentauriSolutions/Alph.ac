@@ -18,7 +18,8 @@
             %td= link.clicks.count
             %td
               =link_to 'Show', link
-              |
-              =link_to 'Edit', edit_link_path(link)
-              |
-              = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
+              - if user_signed_in? && @link.user == current_user
+                |
+                =link_to 'Edit', edit_link_path(link)
+                |
+                = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }

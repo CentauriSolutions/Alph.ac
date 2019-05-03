@@ -276,6 +276,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    scout_apm (2.4.24)
     sexp_processor (4.12.0)
     shellany (0.0.1)
     spring (2.0.2)
@@ -355,6 +356,7 @@ DEPENDENCIES
   redis (~> 4.0)
   rubocop
   sass-rails (~> 5.0)
+  scout_apm
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

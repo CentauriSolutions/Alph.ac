@@ -35,6 +35,8 @@ gem 'jquery-rails'
 
 gem 'groupdate'
 
+gem 'scout_apm'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
